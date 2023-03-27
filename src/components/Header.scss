@@ -1,0 +1,55 @@
+@import '../styles/mixins';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include onMobile {
+    flex-direction: column;
+  }
+}
+
+.nav {
+  display: flex;
+
+  @include onMobile {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+
+    @include onMobile {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &--logo-el {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $secondary-color;
+      font-size: 18px;
+    }
+
+    &--menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 64px;
+      height: 64px;
+    }
+
+    &--menu-logo {
+      width: 18px;
+      height: 12px;
+    }
+  }
+}
