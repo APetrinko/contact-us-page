@@ -13,10 +13,6 @@ import { Blog } from './components/BlogPage/Blog';
 import { Shop } from './components/ShopPage/Shop';
 import { About } from './components/AboutPage/About';
 import { Contact } from './components/ContactPage/Contact';
-// import { Blog } from './components/BlogPage/Blog';
-// import { Shop } from './components/ShopPage/Shop';
-// import { About } from './components/AboutPage/About';
-// import { Contact } from './components/ContactPage/Contact';
 
 const router = createBrowserRouter([
   {
