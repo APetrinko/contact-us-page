@@ -1,4 +1,4 @@
-@import '../styles/mixins';
+@import '../../styles/mixins';
 
 .header {
   display: flex;
@@ -73,7 +73,7 @@
       justify-content: space-between;
 
       @include onMobile {
-        justify-content: center;
+        justify-content: space-around;
         margin-left: 20px;
       }
     }
@@ -99,6 +99,8 @@
     border: 1px solid $secondary-color;
     border-radius: 50%;
     background-color: #fff;
+    width: 50px;
+    height: 50px;
   }
 }
 
