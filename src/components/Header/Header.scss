@@ -65,6 +65,10 @@
     }
   }
 
+  &__link--active{
+    font-weight: bold;
+  }
+
   &__user {
     width: 100px;
 
