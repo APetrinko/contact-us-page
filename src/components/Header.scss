@@ -2,54 +2,106 @@
 
 .header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+
+  &__mobile {
+    background-color: $secondary-color;
+  }
 
   @include onMobile {
     flex-direction: column;
+    padding: 0 16px;
+  }
+
+  @include onDesktop {
+    height: 80px;
+    margin: 0 100px;
   }
 }
 
 .nav {
-  display: flex;
-
-  @include onMobile {
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
+  &__link--logo-el {
+    color: $secondary-color;
   }
 
-  &__link {
+  @include onMobile {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 16px;
+    width: 100%;
+  }
+}
+
+.navigation {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__mobile {
+    color: #fff;
+  }
+
+  @include onMobile {
+    flex-direction: column;
+    height: 100vh;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    @include onMobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__user {
+    width: 100px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      @include onMobile {
+        justify-content: center;
+        margin-left: 20px;
+      }
+    }
 
     @include onMobile {
       width: 100%;
-      justify-content: space-between;
-    }
-
-    &--logo-el {
-      display: flex;
       justify-content: center;
-      align-items: center;
-      color: $secondary-color;
-      font-size: 18px;
-    }
-
-    &--menu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: 64px;
-      height: 64px;
-    }
-
-    &--menu-logo {
-      width: 18px;
-      height: 12px;
     }
   }
+
+  &__link {
+    color: $secondary-color;
+    font-family: "Roboto-Regular", sans-serif;
+
+    @include onMobile {
+      color: $main-color;
+    }
+  }
+}
+
+.link {
+  &__icon {
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+.open {
+  color: $main-color;
 }
