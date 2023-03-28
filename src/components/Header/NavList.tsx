@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
 type Props = {
   isOpenMenu: boolean;
@@ -16,22 +17,22 @@ export const NavList: React.FC<Props> = memo((props: Props) => {
     <nav className={(cn('navigation', { navigation__mobile: !isOpenMenu }))}>
       <ul className="navigation__list">
         <li className="navigation__item">
-          <a href="/" className="navigation__link">Home</a>
+          <Link to="/" className="navigation__link">Home</Link>
         </li>
         <li className="navigation__item">
-          <a href="#features" className="navigation__link">Features</a>
+          <Link to="features" className="navigation__link">Features</Link>
         </li>
         <li className="navigation__item">
-          <a href="#blog" className="navigation__link">Blog</a>
+          <Link to="blog" className="navigation__link">Blog</Link>
         </li>
         <li className="navigation__item">
-          <a href="#shop" className="navigation__link">Shop</a>
+          <Link to="shop" className="navigation__link">Shop</Link>
         </li>
         <li className="navigation__item">
-          <a href="#about" className="navigation__link">About</a>
+          <Link to="about" className="navigation__link">About</Link>
         </li>
         <li className="navigation__item">
-          <a href="#contact" className="navigation__link">Contact</a>
+          <Link to="contact" className="navigation__link">Contact</Link>
         </li>
       </ul>
 
