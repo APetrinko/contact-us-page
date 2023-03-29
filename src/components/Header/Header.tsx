@@ -41,9 +41,9 @@ export const Header: React.FC = memo(() => {
       </div>
 
       {isMobile && isOpenMenu ? (
-        <NavList isOpenMenu={isOpenMenu} setIsOpen={setIsOpen} />
+        <NavList setIsOpen={setIsOpen} />
       ) : isDesktop && (
-        <NavList isOpenMenu={isOpenMenu} setIsOpen={setIsOpen} />
+        <NavList setIsOpen={setIsOpen} />
       )}
     </header>
   );

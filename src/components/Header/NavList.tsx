@@ -1,83 +1,32 @@
-import React, { memo } from 'react';
-import cn from 'classnames';
-import { Link, useLocation } from 'react-router-dom';
+import React, { FC, memo } from 'react';
+import { PageNavLink } from './PageNavLink';
 
 type Props = {
-  isOpenMenu: boolean;
   setIsOpen: (value: React.SetStateAction<boolean>) => void;
 };
 
-export const NavList: React.FC<Props> = memo((props: Props) => {
+const navPath = [
+  { to: '/', text: 'Home' },
+  { to: 'features', text: 'Features' },
+  { to: 'blog', text: 'Blog' },
+  { to: 'shop', text: 'Shop' },
+  { to: 'about', text: 'About' },
+  { to: 'Contact', text: 'Contact' },
+];
+
+export const NavList: FC<Props> = memo((props: Props) => {
   const {
-    isOpenMenu,
     setIsOpen,
   } = props;
 
-  const location = useLocation();
-
   return (
-    <nav className={(cn('navigation', { navigation__mobile: !isOpenMenu }))}>
+    <nav className="navigation">
       <ul className="navigation__list">
-        <li className="navigation__item">
-          <Link
-            to="/"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/',
-            })}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="navigation__item">
-          <Link
-            to="/features"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/features',
-            })}
-          >
-            Features
-          </Link>
-        </li>
-        <li className="navigation__item">
-          <Link
-            to="/blog"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/blog',
-            })}
-          >
-            Blog
-          </Link>
-        </li>
-        <li className="navigation__item">
-          <Link
-            to="/shop"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/shop',
-            })}
-          >
-            Shop
-          </Link>
-        </li>
-        <li className="navigation__item">
-          <Link
-            to="/about"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/about',
-            })}
-          >
-            About
-          </Link>
-        </li>
-        <li className="navigation__item">
-          <Link
-            to="/contact"
-            className={cn('navigation__link', {
-              'navigation__link--active': location.pathname === '/contact',
-            })}
-          >
-            Contact
-          </Link>
-        </li>
+        {navPath.map(navLink => (
+          <li className="navigation__item" key={navLink.to}>
+            <PageNavLink to={navLink.to} text={navLink.text} />
+          </li>
+        ))}
       </ul>
 
       <div className="navigation__user">
