@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import './App.scss';
 import './styles/_fontsTypography.scss';
 import { App } from './App';
@@ -13,10 +13,10 @@ import { Contact } from './components/ContactPage/Contact';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="features" element={<Features />} />
           <Route path="blog" element={<Blog />} />
           <Route path="shop" element={<Shop />} />
@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root'),
 );
