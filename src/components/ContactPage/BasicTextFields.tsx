@@ -1,4 +1,9 @@
-import React, { useState, memo, FC } from 'react';
+import React, {
+  useState,
+  memo,
+  FC,
+  useCallback,
+} from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
@@ -8,22 +13,31 @@ export const ContactIpunts: FC = memo(() => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [selected, setSelected] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleOptionChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelected(event.target.value);
   };
 
+  const resetState = useCallback(() => {
+    setFirstName('');
+    setLastName('');
+    setPhoneNumber('');
+    setEmail('');
+    setSelected('');
+    setMessage('');
+  }, []);
+
   const handleSubmit = (event: { preventDefault: () => void; }) => {
     event?.preventDefault();
-    console.log('submited'); // eslint-disable-line no-console
+    console.log(firstName, phoneNumber, email, message); // eslint-disable-line no-console
+    resetState();
   };
-
-  console.log(selected); // eslint-disable-line no-console
 
   return (
     <form onSubmit={handleSubmit}>
       <Box
-        component="form"
+        component=""
         sx={{
           '& .MuiTextField-root': {
             m: 1,
@@ -70,6 +84,7 @@ export const ContactIpunts: FC = memo(() => {
               <TextField
                 id="standard-required"
                 label="Email"
+                type="email"
                 variant="standard"
                 value={email}
                 onChange={event => {
@@ -81,6 +96,7 @@ export const ContactIpunts: FC = memo(() => {
               <TextField
                 id="standard-required"
                 label="Phone Number"
+                type="tel"
                 variant="standard"
                 value={phoneNumber}
                 onChange={event => {
@@ -141,6 +157,36 @@ export const ContactIpunts: FC = memo(() => {
           </label>
         </div>
       </div>
+      <Box
+        component=""
+        sx={{
+          '& .MuiTextField-root': {
+            m: 1,
+            width: '100%',
+            '& label.Mui-focused': {
+              color: 'black',
+              fontWeight: 600,
+            },
+            '& .MuiInput-underline:after': {
+              borderBottomColor: 'black',
+            },
+          },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="standard-multiline-flexible"
+          label="Message"
+          placeholder="Write your message"
+          multiline
+          maxRows={4}
+          variant="standard"
+          value={message}
+          onChange={event => setMessage(event.target.value)}
+        />
+      </Box>
+      <button type="submit" onClick={handleSubmit}>Send Message</button>
     </form>
   );
 });
