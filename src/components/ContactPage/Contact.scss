@@ -1,0 +1,49 @@
+.contact {
+  margin: 0 120px;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 492px;
+  }
+
+  &__contacts {
+    width: 337px;
+  }
+
+  &__social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__twitter {
+    margin-right: 32px;
+  }
+
+  &__instagram {
+    margin-right: 32px;
+  }
+}
+
+.fields {
+  display: flex;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

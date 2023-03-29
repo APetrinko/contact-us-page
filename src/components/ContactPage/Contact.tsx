@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { ContactIpunts } from './BasicTextFields';
 
-export const Contact: React.FC = () => {
+export const Contact: React.FC = memo(() => {
+  console.log('render contact'); // eslint-disable-line no-console
+
   return (
-    <div className="contact">
+    <section className="contact">
       <div className="contact__header">
         <h1 className="contact__title">Contact Us</h1>
         <p className="contact__subtitle">Any question or remarks? Just write us a message!</p>
@@ -20,11 +23,11 @@ export const Contact: React.FC = () => {
               <img src="" alt="" />
               <a href="tel: +10123456789">+1012 3456 789</a>
             </div>
-            <div className="contact__contacts__phone">
+            <div className="contact__contacts__mail">
               <img src="" alt="" />
               <a href="mailto: demo@gmail.com">demo@gmail.com</a>
             </div>
-            <div className="contact__contacts__phone">
+            <div className="contact__contacts__adress">
               <img src="" alt="" />
               <a href="/">132 Dartmouth Street Boston, Massachusetts 02156 United States</a>
             </div>
@@ -43,8 +46,9 @@ export const Contact: React.FC = () => {
           </div>
         </div>
         <div className="contact__inputs">
+          <ContactIpunts />
         </div>
       </div>
-    </div>
+    </section>
   );
-};
+});
