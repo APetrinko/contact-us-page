@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "./static/css/main.593e3739.chunk.css",
-    "main.js": "./static/js/main.0d5e29b6.chunk.js",
-    "main.js.map": "./static/js/main.0d5e29b6.chunk.js.map",
+    "main.css": "./static/css/main.27e1e3e2.chunk.css",
+    "main.js": "./static/js/main.484feb0a.chunk.js",
+    "main.js.map": "./static/js/main.484feb0a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.8c9895b1.js",
     "runtime-main.js.map": "./static/js/runtime-main.8c9895b1.js.map",
     "static/js/2.9402b870.chunk.js": "./static/js/2.9402b870.chunk.js",
     "static/js/2.9402b870.chunk.js.map": "./static/js/2.9402b870.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.593e3739.chunk.css.map": "./static/css/main.593e3739.chunk.css.map",
+    "static/css/main.27e1e3e2.chunk.css.map": "./static/css/main.27e1e3e2.chunk.css.map",
     "static/js/2.9402b870.chunk.js.LICENSE.txt": "./static/js/2.9402b870.chunk.js.LICENSE.txt",
     "static/media/_fontsTypography.scss": "./static/media/Roboto-Regular.fc2b5060.ttf",
-    "static/media/discord.0de10150.svg": "./static/media/discord.0de10150.svg",
-    "static/media/insta.5c596bec.svg": "./static/media/insta.5c596bec.svg",
-    "static/media/twitter.65c07fe8.svg": "./static/media/twitter.65c07fe8.svg"
+    "static/media/App.scss": "./static/media/user-128.8a9b8f69.svg",
+    "static/media/location.916298ea.svg": "./static/media/location.916298ea.svg",
+    "static/media/mail.46c9c210.svg": "./static/media/mail.46c9c210.svg",
+    "static/media/phone.dd0581d0.svg": "./static/media/phone.dd0581d0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8c9895b1.js",
     "static/js/2.9402b870.chunk.js",
-    "static/css/main.593e3739.chunk.css",
-    "static/js/main.0d5e29b6.chunk.js"
+    "static/css/main.27e1e3e2.chunk.css",
+    "static/js/main.484feb0a.chunk.js"
   ]
 }
