@@ -29,7 +29,7 @@ export const UserContacts: FC<Props> = memo(({
       sx={{
         '& .MuiTextField-root': {
           m: 1,
-          width: '27ch',
+          width: '95%',
           '& label.Mui-focused': {
             color: 'black',
             fontWeight: 600,
