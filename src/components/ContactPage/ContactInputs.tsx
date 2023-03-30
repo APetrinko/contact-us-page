@@ -85,9 +85,9 @@ export const ContactIpunts: FC = memo(() => {
       </Box>
       <div className="button-container">
         <button type="submit" onClick={handleSubmit} className="submit">Send Message</button>
-      </div>
-      <div className="letter">
-        <img src={letter} alt="letter" className="letter__img" />
+        <div className="button-container__letter">
+          <img src={letter} alt="letter" className="button-container__letter-img" />
+        </div>
       </div>
     </form>
   );

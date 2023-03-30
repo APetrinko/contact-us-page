@@ -1,0 +1,44 @@
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  @include onMobile {
+    display: block;
+  }
+
+  &__letter {
+    position: absolute;
+    bottom: -190px;
+    right: 80px;
+  
+    @include onMobile {
+      &__img {
+        width: 105px;
+        height: 82px;
+      }
+  
+      bottom: -140px;
+      right: 100px;
+    }
+  }
+}
+
+.submit {
+  width: 214px;
+  height: 54px;
+  margin-top: 45px;
+  font-family: "Poppins-Medum", sans-serif;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+
+  @include onMobile {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+}

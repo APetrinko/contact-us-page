@@ -1,0 +1,250 @@
+.contact {
+
+  &__subtitle {
+    color: #717171;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 50%;
+    margin-right: 50px;
+    background-color: $secondary-color;
+    color: $main-color;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__circle {
+      position: absolute;
+      bottom: -90px;
+      right: -130px;
+      width: 269px;
+      height: 269px;
+      border-radius: 50%;
+      background-color: #1a1a1a;
+
+      @include onMobile {
+        width: 192px;
+        height: 192px;
+        bottom: -60px;
+        right: -110px;
+      }
+    }
+
+    &__circle-little {
+      position: absolute;
+      opacity: 0.5;
+      bottom: 60px;
+      right: 30px;
+      width: 138px;
+      height: 138px;
+      border-radius: 50%;
+      background: rgba(72, 72, 72, 0.5);
+
+      @include onMobile {
+        width: 54px;
+        height: 54px;
+        bottom: 80px;
+        right: 30px;
+      }
+    }
+
+    @include onMobile {
+      align-items: center;
+      width: 100%;
+    }
+
+    &__header {
+      margin: 40px 0 111px 40px;
+    }
+
+    &__subtitle {
+      color: #c9c9c9;
+      font-family: "Poppins-SemiBold", sans-serif;
+    }
+  }
+
+  &__contacts {
+    width: 337px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    color: $main-color;
+
+    @include onMobile {
+      align-items: center;
+    }
+
+    &__phone-number {
+      margin-left: 25px;
+    }
+
+    &__phone-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__mail-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__adress-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__mail-link {
+      margin-left: 25px;
+    }
+
+    &__adress-street {
+      margin-left: 25px;
+    }
+
+    &__phone {
+      margin: 0 0 50px 40px;
+      display: flex;
+      align-items: center;
+
+      @include onMobile {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    &__mail {
+      margin: 0 0 50px 40px;
+      display: flex;
+      align-items: center;
+
+      @include onMobile {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    &__adress {
+      margin: 0 0 159px 40px;
+      display: flex;
+      align-items: center;
+
+      @include onMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    &__phone-number {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
+
+    &__mail-link {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
+
+    &__adress-street {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 36px;
+    margin-left: 40px;
+  }
+
+  &__twitter {
+    background-color: #262626;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../styles/imgs/twitter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../../../styles/imgs/twitter-hover.svg');
+      cursor: pointer;
+    }
+  }
+
+  &__instagram {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    background-image: url('../../../../styles/imgs/insta-hover1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../../../styles/imgs/insta.svg');
+      cursor: pointer;
+    }
+  }
+
+  &__discord {
+    background-color: #262626;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../styles/imgs/discord.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../../../styles/imgs/discord-hover.svg');
+      cursor: pointer;
+    }
+  }
+
+  &__inputs {
+    @include onMobile {
+      margin: 0 21px;
+    }
+  }
+}

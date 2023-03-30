@@ -6,6 +6,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include onMobile {
+    margin-bottom: 14px;
+  }
+
   &__mobile {
     background-color: $secondary-color;
   }
@@ -27,6 +31,7 @@
   }
 
   @include onMobile {
+    height: 81px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

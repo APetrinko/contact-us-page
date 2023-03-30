@@ -1,0 +1,41 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+
+  &__full-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+
+    @include onMobile {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    &__first-name {
+      margin-right: 39px;
+
+      @include onMobile {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    margin-bottom: 37px;
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  &__contacts-email {
+    margin-right: 39px;
+
+    @include onMobile {
+      margin-right: 0;
+    }
+  }
+}

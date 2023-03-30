@@ -1,0 +1,30 @@
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @include onMobile {
+    flex-wrap: wrap;
+  }
+}
+
+.round {
+  width: max-content;
+
+  @include onMobile {
+    width: 50%;
+  }
+}
+
+.title {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.label {
+  font-family: "Poppins-Regular";
+  font-size: 12px;
+  margin-left: 10px;
+}
+
