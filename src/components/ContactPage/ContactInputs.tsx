@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { UserContacts } from './Inputs/UserContacts';
 import { Checkboxes } from './Inputs/Checkboxes';
+import letter from '../../styles/imgs/letter.svg';
 
 export const ContactIpunts: FC = memo(() => {
   const [firstName, setFirstName] = useState('');
@@ -84,6 +85,9 @@ export const ContactIpunts: FC = memo(() => {
       </Box>
       <div className="button-container">
         <button type="submit" onClick={handleSubmit} className="submit">Send Message</button>
+      </div>
+      <div className="letter">
+        <img src={letter} alt="letter" className="letter__img" />
       </div>
     </form>
   );

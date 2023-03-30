@@ -377,3 +377,19 @@
     width: 100%;
   }
 }
+
+.letter {
+  position: absolute;
+  bottom: -100px;
+  right: 300px;
+
+  @include onMobile {
+    &__img {
+      width: 105px;
+      height: 82px;
+    }
+
+    top: 1460px;
+    right: 200px;
+  }
+}
