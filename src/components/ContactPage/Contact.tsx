@@ -16,6 +16,8 @@ export const Contact: React.FC = memo(() => {
 
       <div className="contact__field">
         <div className="contact__info">
+          <div className="contact__info__circle"></div>
+          <div className="contact__info__circle-little"></div>
           <div className="contact__info__header">
             <h2 className="contact__info__title">Contact Information</h2>
             <p className="contact__info__subtitle">Say something to start a live chat!</p>
