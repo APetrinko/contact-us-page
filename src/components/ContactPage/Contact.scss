@@ -1,49 +1,186 @@
 .contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 0 120px;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
   }
 
   &__field {
     display: flex;
-    justify-content: space-between;
     width: 100%;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    width: 492px;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    margin-right: 50px;
+    background-color: $secondary-color;
+    color: $main-color;
+    border-radius: 10px;
+
+    &__header {
+      margin: 40px 0 111px 40px;
+    }
+
+    &__subtitle {
+      color: #c9c9c9;
+      font-family: "Poppins-SemiBold", sans-serif;
+    }
   }
 
   &__contacts {
     width: 337px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    color: $main-color;
+
+    &__phone {
+      margin: 0 0 50px 40px;
+    }
+
+    &__mail {
+      margin: 0 0 50px 40px;
+    }
+
+    &__adress {
+      margin: 0 0 159px 40px;
+    }
+
+    &__phone-number {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
+
+    &__mail-link {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
+
+    &__adress-street {
+      color: $main-color;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 16px;
+    }
   }
 
   &__social-media {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    margin-bottom: 36px;
+    margin-left: 40px;
   }
 
   &__twitter {
+    background-color: #262626;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__instagram {
     margin-right: 32px;
+    background-color: $main-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__discord {
+    background-color: #262626;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .fields {
   display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+
+  &__full-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+
+    &__first-name {
+      margin-right: 39px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    margin-bottom: 37px;
+  }
+
+  &__contacts-email {
+    margin-right: 39px;
+  }
 }
 
 .checkboxes {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.title {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.label {
+  font-family: "Poppins-Regular";
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit {
+  width: 214px;
+  height: 54px;
+  margin-top: 45px;
+  font-family: "Poppins-Medum", sans-serif;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
 }
