@@ -48,6 +48,7 @@ export const UserContacts: FC<Props> = memo(({
             <TextField
               id="standard-required"
               label="First Name"
+              required
               variant="standard"
               value={firstName}
               onChange={event => {
@@ -60,6 +61,7 @@ export const UserContacts: FC<Props> = memo(({
               id="standard-required"
               label="Last Name"
               variant="standard"
+              required
               value={lastName}
               onChange={event => {
                 setLastName(event.target.value);
@@ -73,6 +75,7 @@ export const UserContacts: FC<Props> = memo(({
               id="standard-required"
               label="Email"
               type="email"
+              required
               variant="standard"
               value={email}
               onChange={event => {
@@ -84,6 +87,7 @@ export const UserContacts: FC<Props> = memo(({
             <TextField
               id="standard-required"
               label="Phone Number"
+              required
               type="tel"
               variant="standard"
               value={phoneNumber}

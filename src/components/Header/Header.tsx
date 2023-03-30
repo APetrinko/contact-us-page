@@ -1,4 +1,9 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, {
+  memo,
+  useState,
+  useEffect,
+  useCallback,
+} from 'react';
 import cn from 'classnames';
 import menuOpen from '../../styles/imgs/menu-open.png';
 import menuClose from '../../styles/imgs/menu-close.png';
@@ -18,6 +23,10 @@ export const Header: React.FC = memo(() => {
       setIsDesktop(true);
     }
   }, []);
+
+  const handleLinkClick = useCallback(() => {
+    setIsOpen(false);
+  }, [setIsOpen]);
 
   return (
     <header className={cn('header', { header__mobile: isOpenMenu && isMobile })}>
@@ -41,7 +50,7 @@ export const Header: React.FC = memo(() => {
       </div>
 
       {isMobile && isOpenMenu ? (
-        <NavList setIsOpen={setIsOpen} />
+        <NavList setIsOpen={setIsOpen} onClick={handleLinkClick} />
       ) : isDesktop && (
         <NavList setIsOpen={setIsOpen} />
       )}

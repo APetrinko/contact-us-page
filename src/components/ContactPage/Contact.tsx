@@ -1,8 +1,5 @@
 import React, { memo } from 'react';
 import { ContactIpunts } from './ContactInputs';
-import insta from '../../styles/imgs/insta.svg';
-import twitter from '../../styles/imgs/twitter.svg';
-import discord from '../../styles/imgs/discord.svg';
 import phone from '../../styles/imgs/phone.svg';
 import mail from '../../styles/imgs/mail.svg';
 import location from '../../styles/imgs/location.svg';
@@ -42,17 +39,14 @@ export const Contact: React.FC = memo(() => {
           <div className="contact__social-media">
             <div className="contact__twitter">
               <a href="https://twitter.com/">
-                <img src={twitter} alt="twitter" />
               </a>
             </div>
             <div className="contact__instagram">
               <a href="https://instagram.com">
-                <img src={insta} alt="instagram" />
               </a>
             </div>
             <div className="contact__discord">
               <a href="https://discord.com">
-                <img src={discord} alt="discord" />
               </a>
             </div>
           </div>

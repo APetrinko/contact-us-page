@@ -103,6 +103,8 @@
 
     &__phone {
       margin: 0 0 50px 40px;
+      display: flex;
+      align-items: center;
 
       @include onMobile {
         margin-left: 0;
@@ -115,6 +117,8 @@
 
     &__mail {
       margin: 0 0 50px 40px;
+      display: flex;
+      align-items: center;
 
       @include onMobile {
         margin-left: 0;
@@ -127,6 +131,8 @@
 
     &__adress {
       margin: 0 0 159px 40px;
+      display: flex;
+      align-items: center;
 
       @include onMobile {
         display: flex;
@@ -174,11 +180,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../styles/imgs/twitter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../styles/imgs/twitter-hover.svg');
+      cursor: pointer;
+    }
   }
 
   &__instagram {
-    margin-right: 32px;
-    background-color: $main-color;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -186,6 +200,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #262626;
+    background-image: url('../../styles/imgs/insta-hover1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../styles/imgs/insta.svg');
+      cursor: pointer;
+    }
   }
 
   &__discord {
@@ -197,6 +222,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../styles/imgs/discord.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $main-color;
+      background-image: url('../../styles/imgs/discord-hover.svg');
+      cursor: pointer;
+    }
   }
 
   &__inputs {
@@ -252,10 +287,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap;
+
+  @include onMobile {
+    flex-wrap: wrap;
+  }
 }
 
 .round {
+  width: max-content;
+
   @include onMobile {
     width: 50%;
   }

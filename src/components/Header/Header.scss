@@ -65,7 +65,7 @@
     }
   }
 
-  &__link--active{
+  &__link--active {
     font-weight: bold;
   }
 
@@ -99,12 +99,49 @@
 }
 
 .link {
-  &__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon-user {
     border: 1px solid $secondary-color;
+    background-image: url('../../styles/imgs/user-128-128.png');
+    background-position: center;
+    background-size: contain;
     border-radius: 50%;
     background-color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 31px;
+    height: 31px;
+
+    @include onMobile {
+      background-color: $secondary-color;
+      border-color: $main-color;
+      background-image: url('../../styles/imgs/user-128.svg');
+      background-position: center;
+      background: size 16px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__icon-bascket {
+    border: 1px solid $secondary-color;
+    background-image: url('../../styles/imgs/busket.svg');
+    background-position: center;
+    background: size 16px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 31px;
+    height: 31px;
+
+    @include onMobile {
+      background-color: $secondary-color;
+      border-color: $main-color;
+      background-image: url('../../styles/imgs/basket-mobile.svg');
+      background-position: left 6px top 6px;
+      background: size 16px;
+      background-repeat: no-repeat;
+    }
   }
 }
 

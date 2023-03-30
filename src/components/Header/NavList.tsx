@@ -3,6 +3,7 @@ import { PageNavLink } from './PageNavLink';
 
 type Props = {
   setIsOpen: (value: React.SetStateAction<boolean>) => void;
+  onClick?: () => void;
 };
 
 const navPath = [
@@ -11,12 +12,13 @@ const navPath = [
   { to: 'blog', text: 'Blog' },
   { to: 'shop', text: 'Shop' },
   { to: 'about', text: 'About' },
-  { to: 'Contact', text: 'Contact' },
+  { to: 'contact', text: 'Contact' },
 ];
 
 export const NavList: FC<Props> = memo((props: Props) => {
   const {
     setIsOpen,
+    onClick,
   } = props;
 
   return (
@@ -24,7 +26,7 @@ export const NavList: FC<Props> = memo((props: Props) => {
       <ul className="navigation__list">
         {navPath.map(navLink => (
           <li className="navigation__item" key={navLink.to}>
-            <PageNavLink to={navLink.to} text={navLink.text} />
+            <PageNavLink to={navLink.to} text={navLink.text} onClick={onClick} />
           </li>
         ))}
       </ul>
@@ -34,24 +36,24 @@ export const NavList: FC<Props> = memo((props: Props) => {
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="link__icon"
+            className="link__icon-user"
           >
-            <li className="navigation__user__item cartNav">
-              <img src="" alt="user" />
+            <li className="navigation__user__item cartNav-user">
             </li>
           </button>
 
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="link__icon"
+            className="link__icon-bascket"
           >
-            <li className="navigation__user__item cartNav">
-              <img src="" alt="user" />
-            </li>
           </button>
         </ul>
       </div>
     </nav>
   );
 });
+
+NavList.defaultProps = {
+  onClick: () => { },
+};

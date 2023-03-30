@@ -5,9 +5,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 type Props = {
   to: string;
   text: string;
+  onClick?: () => void;
 };
 
-export const PageNavLink: FC<Props> = ({ to, text }) => {
+export const PageNavLink: FC<Props> = ({ to, text, onClick }) => {
   const location = useLocation();
 
   return (
@@ -16,8 +17,15 @@ export const PageNavLink: FC<Props> = ({ to, text }) => {
       className={cn('navigation__link', {
         'navigation__link--active': location.pathname === `/${to}`,
       })}
+      onClick={onClick}
     >
       {text}
     </NavLink>
   );
+};
+
+PageNavLink.defaultProps = {
+  onClick() {
+
+  },
 };

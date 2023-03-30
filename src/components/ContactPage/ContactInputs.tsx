@@ -28,6 +28,14 @@ export const ContactIpunts: FC = memo(() => {
 
   const handleSubmit = (event: { preventDefault: () => void; }) => {
     event?.preventDefault();
+
+    if (firstName.trim() === '' || phoneNumber.trim() === '' || email.trim() === '') {
+      alert('Please fill in all required fields');
+
+      return;
+    }
+
+    alert('Thank you for your message!');
     console.log(firstName, phoneNumber, email, message); // eslint-disable-line no-console
     resetState();
   };
