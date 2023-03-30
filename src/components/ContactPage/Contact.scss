@@ -71,11 +71,45 @@
       align-items: center;
     }
 
+    &__phone-number {
+      margin-left: 25px;
+    }
+
+    &__phone-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__mail-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__adress-img {
+      height: 24px;
+      width: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__mail-link {
+      margin-left: 25px;
+    }
+
+    &__adress-street {
+      margin-left: 25px;
+    }
+
     &__phone {
       margin: 0 0 50px 40px;
 
       @include onMobile {
         margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
     }
 
@@ -84,6 +118,10 @@
 
       @include onMobile {
         margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
     }
 
@@ -91,6 +129,10 @@
       margin: 0 0 159px 40px;
 
       @include onMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
         margin-left: 0;
       }
