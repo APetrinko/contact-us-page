@@ -28,3 +28,20 @@
   margin-left: 10px;
 }
 
+.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+
+  background-color: #E0E0E0;
+
+  &:checked {
+    background-image: url('../../../../styles//imgs/Tick.svg');
+    background-size: 13px;
+    background-position: bottom;
+  }
+}

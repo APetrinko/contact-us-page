@@ -11,18 +11,22 @@
     position: absolute;
     bottom: -190px;
     right: 80px;
-  
+
     @include onMobile {
-      &__img {
-        width: 105px;
-        height: 82px;
-      }
-  
-      bottom: -140px;
-      right: 100px;
+      bottom: -30px;
+      right: 200px;
+    }
+  }
+
+  &__letter-img {
+    @include onMobile {
+      width: 105px;
+      height: 82px;
     }
   }
 }
+
+
 
 .submit {
   width: 214px;
