@@ -5,7 +5,7 @@ type Props = {
   setSelected: (event) => void;
 };
 
-export const Checkboxes: FC<Props> = ({ selected, setSelected }) => {
+export const RadioButtons: FC<Props> = ({ selected, setSelected }) => {
   const handleOptionChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelected(event.target.value);
   };

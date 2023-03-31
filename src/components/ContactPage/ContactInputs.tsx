@@ -7,7 +7,7 @@ import React, {
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { UserContacts } from './Inputs/UserContacts';
-import { Checkboxes } from './Inputs/Checkboxes';
+import { RadioButtons } from './Inputs/RaioButtons';
 import letter from '../../styles/imgs/letter.svg';
 
 export const ContactIpunts: FC = memo(() => {
@@ -53,7 +53,7 @@ export const ContactIpunts: FC = memo(() => {
         setPhoneNumber={setPhoneNumber}
         setEmail={setEmail}
       />
-      <Checkboxes selected={selected} setSelected={setSelected} />
+      <RadioButtons selected={selected} setSelected={setSelected} />
       <Box
         component=""
         sx={{
