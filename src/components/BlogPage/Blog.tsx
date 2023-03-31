@@ -1,9 +1,10 @@
 import React from 'react';
+import { NotFoundPage } from '../NotFoundPage/NotFoundPage';
 
 export const Blog: React.FC = () => {
   return (
     <div>
-      <h1>Blog Page</h1>
+      <NotFoundPage />
     </div>
   );
 };

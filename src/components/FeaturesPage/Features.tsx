@@ -1,9 +1,10 @@
 import React from 'react';
+import { NotFoundPage } from '../NotFoundPage/NotFoundPage';
 
 export const Features: React.FC = () => {
   return (
     <div>
-      <h1>Features Page</h1>
+      <NotFoundPage />
     </div>
   );
 };

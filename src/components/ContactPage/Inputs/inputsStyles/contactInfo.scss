@@ -179,6 +179,12 @@
     margin-left: 40px;
   }
 
+  &__social-link {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   &__twitter {
     background-color: #262626;
     width: 40px;

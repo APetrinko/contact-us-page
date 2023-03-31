@@ -1,6 +1,7 @@
 @import './styles/reset';
 @import './styles/normilize';
 @import './styles/variables';
+@import './components/NotFoundPage/NotFoundPage.scss';
 @import './components/Header/Header.scss';
 @import './components/ContactPage/Contact.scss';
 @import './components/Footer/Footer.scss';
@@ -8,7 +9,6 @@
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 
   @include onMobile {
     display: block;

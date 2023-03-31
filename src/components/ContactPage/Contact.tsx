@@ -34,21 +34,46 @@ export const Contact: React.FC = memo(() => {
             </div>
             <div className="contact__contacts__adress">
               <img src={location} alt="location" className="contact__contacts__adress-img" />
-              <a href="/" className="contact__contacts__adress-street">132 Dartmouth Street Boston, Massachusetts 02156 United States</a>
+              <a
+                href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6"
+                className="contact__contacts__adress-street"
+                target="_blank"
+                rel="noreferrer"
+              >
+                132 Dartmouth Street Boston, Massachusetts 02156 United States
+              </a>
             </div>
           </div>
 
           <div className="contact__social-media">
             <div className="contact__twitter">
-              <a href="https://twitter.com/">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="contact__social-link"
+              >
+                twitter
               </a>
             </div>
             <div className="contact__instagram">
-              <a href="https://instagram.com">
+              <a
+                href="https://instagram.com"
+                className="contact__social-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                insta
               </a>
             </div>
             <div className="contact__discord">
-              <a href="https://discord.com">
+              <a
+                href="https://discord.com"
+                target="_blank"
+                rel="noreferrer"
+                className="contact__social-link"
+              >
+                discord
               </a>
             </div>
           </div>

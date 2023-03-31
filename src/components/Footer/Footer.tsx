@@ -36,7 +36,12 @@ export const Footer = () => {
                   <a href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6" className="footer__icon footer__icon-geo"> </a>
                 </li>
                 <li>
-                  <a href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6" className="footer__link">
+                  <a
+                    href="https://goo.gl/maps/oD4H5WuzsGLrWrJo6"
+                    className="footer__link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     132 Dartmouth Street
                     <br />
                     Boston, Massachusetts
@@ -103,6 +108,7 @@ export const Footer = () => {
               type="email"
               placeholder="Your email address"
               className="form__input"
+              required
             />
             <button type="submit" className="form__btn">
               Subscribe

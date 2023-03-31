@@ -17,6 +17,8 @@ export const ContactIpunts: FC = memo(() => {
   const [email, setEmail] = useState('');
   const [selected, setSelected] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [succesfullMessage, setSuccesfullMessage] = useState('');
 
   const resetState = useCallback(() => {
     setFirstName('');
@@ -25,18 +27,39 @@ export const ContactIpunts: FC = memo(() => {
     setEmail('');
     setSelected('');
     setMessage('');
+    setErrorMessage('');
   }, []);
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const handleSubmit = (event: { preventDefault: () => void; }) => {
     event?.preventDefault();
 
-    if (firstName.trim() === '' || phoneNumber.trim() === '' || email.trim() === '') {
-      alert('Please fill in all required fields');
+    if (firstName.trim() === '') {
+      setErrorMessage('Please enter your first name');
 
       return;
     }
 
-    alert('Thank you for your message!');
+    if (lastName.trim() === '') {
+      setErrorMessage('Please enter your last name');
+
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      setErrorMessage('Invalid email');
+
+      return;
+    }
+
+    if (message.trim().length < 120) {
+      setErrorMessage('Your message should include 120 characters');
+
+      return;
+    }
+
+    setSuccesfullMessage('Thank you for your message!');
     console.log(firstName, phoneNumber, email, message); // eslint-disable-line no-console
     resetState();
   };
@@ -84,6 +107,11 @@ export const ContactIpunts: FC = memo(() => {
         />
       </Box>
       <div className="button-container">
+        {errorMessage ? (
+          <p className="error">{errorMessage}</p>
+        ) : (
+          <p className="succesfull">{succesfullMessage}</p>
+        )}
         <button type="submit" onClick={handleSubmit} className="submit">Send Message</button>
         <div className="button-container__letter">
           <img src={letter} alt="letter" className="button-container__letter-img" />
